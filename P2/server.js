@@ -31,10 +31,11 @@ app.post("/", async (req, res) => {
     try {
 
         const mailgun = new Mailgun(formData);
+        
 
         const mg = mailgun.client({
             username: "api",
-            key: process.env.MAILGUN_API_KEY
+            key: console.log(process.env.MAILGUN_API_KEY)
         });
 
         const message = await mg.messages.create(
