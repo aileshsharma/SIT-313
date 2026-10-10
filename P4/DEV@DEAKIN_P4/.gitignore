@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-node_modules
-src/components/utilities/firebase.jsx
+node_modules/
+/src/components/utilities/firebase.jsx
