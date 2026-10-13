@@ -1,0 +1,239 @@
+
+/* Main page */
+.post-page {
+  width: 90%;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0;
+  background: #fff;
+  color: #111;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Page heading and section heading */
+.post-page h1,
+.post-page h2 {
+  background: #e2e2e2;
+  color: #111;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 7px;
+  margin: 0 0 10px;
+}
+
+.post-page h1 {
+  margin-bottom: 10px;
+}
+
+/* Form */
+.post-page form {
+  width: 100%;
+}
+
+/* Post type selection */
+.post-type-section {
+  margin-bottom: 22px;
+}
+
+.section-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.post-type-options {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  margin-left: 5px;
+}
+
+.post-type-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.post-type-options input[type="radio"] {
+  accent-color: #555;
+  width: 13px;
+  height: 13px;
+  margin: 0;
+}
+
+/* Section description */
+.post-description {
+  margin: 12px 10px;
+  line-height: 1.4;
+}
+
+.post-description .highlight {
+  color: #f04432;
+}
+
+/* Fields */
+.post-field {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  margin: 0 7px 17px;
+}
+
+.post-field label {
+  font-weight: normal;
+  margin-left: 3px;
+}
+
+.post-field input,
+.post-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #777;
+  border-radius: 0;
+  padding: 3px 7px;
+  color: #111;
+  background: white;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  outline: none;
+}
+
+.post-field input {
+  height: 24px;
+}
+
+.post-field textarea {
+  resize: none;
+  line-height: 1.4;
+}
+
+.post-field input:focus,
+.post-field textarea:focus {
+  border-color: #333;
+}
+
+.post-field input::placeholder,
+.post-field textarea::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+/* Question description */
+.post-field textarea#description {
+  height: 256px;
+}
+
+/* Article abstract */
+.post-field textarea#abstract {
+  height: 52px;
+}
+
+/* Article content */
+.post-field textarea#articleText {
+  height: 165px;
+}
+
+/* Tags */
+.post-field input[name="tags"] {
+  height: 24px;
+}
+
+/* Optional field helper text */
+.post-field small {
+  color: #666;
+  font-size: 12px;
+}
+
+/* Validation */
+.post-error {
+  color: #d93025;
+  margin: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* Post button */
+.post-submit {
+  display: block;
+  width: 140px;
+  height: 27px;
+  margin: 23px 0 0 auto;
+  padding: 2px 10px;
+  border: none;
+  border-radius: 0;
+  background: #a3a3a3;
+  color: #111;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.post-submit:hover {
+  background: #8c8c8c;
+}
+
+/* Confirmation popup */
+.post-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.post-popup {
+  width: min(420px, 100%);
+  box-sizing: border-box;
+  padding: 25px;
+  background: #fff;
+  border: 1px solid #888;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.post-popup h2 {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  background: transparent;
+}
+
+.post-popup p {
+  line-height: 1.5;
+  margin: 15px 0 20px;
+}
+
+.post-popup .post-submit {
+  margin: 0 auto;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+  .post-page {
+    width: 94%;
+    margin: 15px auto;
+  }
+
+  .post-type-options {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .post-field textarea#description {
+    height: 200px;
+  }
+
+  .post-field textarea#articleText {
+    height: 150px;
+  }
+
+  .post-submit {
+    max-width: 100%;
+  }
+}
