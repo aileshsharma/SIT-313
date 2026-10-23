@@ -22,6 +22,8 @@ const articles = [
     author: "Marcus Aurelius",
     image: "/images/Marcus Aurelius.jpg",
   },
+
+  
 ];
 
 function FeaturedArticles() {
